@@ -7,14 +7,7 @@
     <title>Homeloom — The OS for homeschool families</title>
     <meta name="description" content="Homeloom helps homeschool families file compliance, plan daily school, and generate transcripts — all in one calm system." />
     <meta name="author" content="Homeloom" />
-    <!-- GA4: set VITE_GA_ID in Vercel env vars -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=%VITE_GA_ID%"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', '%VITE_GA_ID%');
-    </script>
+    <!-- Analytics is initialized in src/analytics/init.ts (guarded, no-ops when unconfigured). -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="apple-touch-icon" href="/favicon.svg" />
