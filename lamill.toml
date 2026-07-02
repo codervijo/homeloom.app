@@ -11,6 +11,10 @@ custom_domains = [
     "homeloom.app",
 ]
 
+[index]
+indexnow_key = "cc45d3afd53064da1a60d5a679e84e29"
+indexnow_enabled = true
+
 [stack]
 framework = "vite-react"
 
