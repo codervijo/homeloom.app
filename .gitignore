@@ -10,6 +10,10 @@ dist/
 # Vite
 *.local
 dist-ssr/
+.vite-react-ssg-temp/
+
+# pnpm (in-repo store only appears if store-dir is set locally)
+.pnpm-store/
 
 # Bun
 bun.lockb

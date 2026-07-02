@@ -23,7 +23,7 @@ export default function Landing() {
       <Box sx={{ background: "linear-gradient(180deg, #EEF4FE 0%, #FAFBFD 100%)" }}>
         <Container maxWidth="lg" sx={{ py: { xs: 8, md: 14 }, textAlign: "center" }}>
           <Chip label="Built for homeschool families" color="primary" variant="outlined" sx={{ mb: 3 }} />
-          <Typography variant="h2" sx={{ fontSize: { xs: "2.25rem", md: "3.5rem" }, mb: 2 }}>
+          <Typography variant="h2" component="h1" sx={{ fontSize: { xs: "2.25rem", md: "3.5rem" }, mb: 2 }}>
             Run your homeschool with clarity.
           </Typography>
           <Typography variant="h6" color="text.secondary" sx={{ maxWidth: 720, mx: "auto", fontWeight: 400, mb: 4 }}>

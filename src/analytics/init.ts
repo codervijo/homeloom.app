@@ -8,6 +8,11 @@
  */
 
 export function initAnalytics(): void {
+  // Never run during server-side prerender — no window/document there.
+  if (typeof window === "undefined" || typeof document === "undefined") {
+    return;
+  }
+
   const gaId = import.meta.env.VITE_GA_ID?.trim();
 
   // No usable ID: undefined/blank, an unsubstituted "%VITE_GA_ID%" placeholder,
