@@ -5,6 +5,8 @@ import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
 
 const links = [
+  { to: "/homeschool-laws", label: "State Laws" },
+  { to: "/guides", label: "Guides" },
   { to: "/dashboard", label: "Dashboard" },
   { to: "/compliance", label: "Compliance" },
   { to: "/transcript", label: "Transcript" },
@@ -63,6 +65,10 @@ export default function Layout({ children }) {
       <Box component="main">{children}</Box>
 
       <Box component="footer" sx={{ py: 4, mt: 8, borderTop: "1px solid #eef1f6", textAlign: "center" }}>
+        <Stack direction="row" spacing={2} justifyContent="center" sx={{ mb: 1.5, flexWrap: "wrap" }}>
+          <Button component={Link} to="/homeschool-laws" color="inherit" size="small">Homeschool Laws</Button>
+          <Button component={Link} to="/guides" color="inherit" size="small">Guides</Button>
+        </Stack>
         <Typography variant="body2" color="text.secondary">© {new Date().getFullYear()} Homeloom · The operating system for homeschool families</Typography>
       </Box>
     </Box>

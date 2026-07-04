@@ -3,29 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- TODO: Set the document title to the name of your application -->
-    <title>Homeloom — The OS for homeschool families</title>
-    <meta name="description" content="Homeloom helps homeschool families file compliance, plan daily school, and generate transcripts — all in one calm system." />
     <meta name="author" content="Homeloom" />
+    <!-- Per-page title, description, canonical and og:title/description/url are set
+         per route via src/seo/Seo.tsx (prerendered into each page's <head>). -->
     <!-- Analytics is initialized in src/analytics/init.ts (guarded, no-ops when unconfigured). -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="apple-touch-icon" href="/favicon.svg" />
-    <link rel="canonical" href="https://homeloom.app/" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-    <meta property="og:title" content="Homeloom — The OS for homeschool families" />
-    <meta property="og:description" content="Compliance, daily planning, and transcripts — all in one place." />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://homeloom.app/" />
     <meta property="og:image" content="https://homeloom.app/og-image.png" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@homeloomapp" />
     <meta name="twitter:image" content="https://homeloom.app/og-image.png" />
 
+    <!-- Sitewide entity graph (appears on every prerendered page). Page-specific
+         schema (WebApplication, FAQPage, Article, BreadcrumbList) is emitted per
+         route via src/seo/Seo.tsx. -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -35,7 +33,8 @@
             "@id": "https://homeloom.app/#organization",
             "name": "Homeloom",
             "url": "https://homeloom.app/",
-            "logo": "https://homeloom.app/favicon.svg"
+            "logo": "https://homeloom.app/favicon.svg",
+            "sameAs": ["[VERIFY: add real social/GitHub profile URLs for Homeloom]"]
           },
           {
             "@type": "WebSite",
@@ -49,53 +48,6 @@
               "target": "https://homeloom.app/?q={search_term_string}",
               "query-input": "required name=search_term_string"
             }
-          },
-          {
-            "@type": "WebApplication",
-            "name": "Homeloom",
-            "url": "https://homeloom.app/",
-            "applicationCategory": "EducationApplication",
-            "operatingSystem": "Web",
-            "description": "Homeloom helps homeschool families file compliance, plan daily school, and generate transcripts — all in one calm system.",
-            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-            "publisher": { "@id": "https://homeloom.app/#organization" }
-          },
-          {
-            "@type": "FAQPage",
-            "mainEntity": [
-              {
-                "@type": "Question",
-                "name": "What is Homeloom?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Homeloom is a web app for homeschool families to track daily tasks, file state compliance paperwork, and generate official transcripts."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Is Homeloom free to use?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Yes. The core homeschool dashboard, compliance drafting, and transcript generator are free."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Does Homeloom file my California PSA for me?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Homeloom generates a draft Private School Affidavit (PSA) PDF you can keep for your records. Final filing is done on the official California Department of Education site."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Can I export an official-looking transcript?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Yes. Homeloom's transcript generator builds a clean PDF transcript with subjects, hours, credits, and GPA from the work you've tracked."
-                }
-              }
-            ]
           }
         ]
       }

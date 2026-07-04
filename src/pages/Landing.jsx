@@ -3,6 +3,17 @@ import { Link } from "react-router-dom";
 import GavelRoundedIcon from "@mui/icons-material/GavelRounded";
 import SchoolRoundedIcon from "@mui/icons-material/SchoolRounded";
 import DescriptionRoundedIcon from "@mui/icons-material/DescriptionRounded";
+import Seo from "../seo/Seo.tsx";
+import { webApplicationNode, faqNode } from "../seo/schema.ts";
+
+// Homepage FAQ (also emitted as FAQPage JSON-LD). Moved out of index.html so
+// the app-specific schema only appears on "/".
+const homeFaqs = [
+  { q: "What is Homeloom?", a: "Homeloom is a web app for homeschool families to track daily tasks, file state compliance paperwork, and generate official transcripts." },
+  { q: "Is Homeloom free to use?", a: "Yes. The core homeschool dashboard, compliance drafting, and transcript generator are free." },
+  { q: "Does Homeloom file my California PSA for me?", a: "Homeloom generates a draft Private School Affidavit (PSA) PDF you can keep for your records. Final filing is done on the official California Department of Education site." },
+  { q: "Can I export an official-looking transcript?", a: "Yes. Homeloom's transcript generator builds a clean PDF transcript with subjects, hours, credits, and GPA from the work you've tracked." },
+];
 
 const features = [
   { icon: <GavelRoundedIcon />, title: "Compliance Autopilot", desc: "File your PSA in minutes. Stay legal without the paperwork stress." },
@@ -19,6 +30,12 @@ const problems = [
 export default function Landing() {
   return (
     <>
+      <Seo
+        title="Homeloom — The OS for homeschool families"
+        description="Homeloom helps homeschool families file compliance, plan daily school, and generate transcripts — all in one calm system."
+        path="/"
+        graph={[webApplicationNode(), faqNode(homeFaqs)]}
+      />
       {/* Hero */}
       <Box sx={{ background: "linear-gradient(180deg, #EEF4FE 0%, #FAFBFD 100%)" }}>
         <Container maxWidth="lg" sx={{ py: { xs: 8, md: 14 }, textAlign: "center" }}>
@@ -82,6 +99,44 @@ export default function Landing() {
           </Grid>
         </Container>
       </Box>
+
+      {/* Resources / internal links */}
+      <Container maxWidth="lg" sx={{ py: { xs: 8, md: 12 } }}>
+        <Typography variant="overline" color="primary">Free resources</Typography>
+        <Typography variant="h3" sx={{ fontSize: { xs: "1.75rem", md: "2.25rem" }, mb: 4, mt: 1 }}>
+          Know the rules. Run the year.
+        </Typography>
+        <Grid container spacing={3}>
+          <Grid size={{ xs: 12, md: 6 }}>
+            <Card sx={{ height: "100%" }}>
+              <CardContent>
+                <Typography variant="h6" sx={{ mb: 1 }}>
+                  <Link to="/homeschool-laws">Homeschool laws by state</Link>
+                </Typography>
+                <Typography color="text.secondary" sx={{ mb: 1 }}>
+                  Notification, testing, recordkeeping, withdrawal, and transcript rules
+                  for all 50 states + DC.
+                </Typography>
+                <Link to="/homeschool-laws">Browse all states →</Link>
+              </CardContent>
+            </Card>
+          </Grid>
+          <Grid size={{ xs: 12, md: 6 }}>
+            <Card sx={{ height: "100%" }}>
+              <CardContent>
+                <Typography variant="h6" sx={{ mb: 1 }}>
+                  <Link to="/guides">Homeschool guides</Link>
+                </Typography>
+                <Typography color="text.secondary" sx={{ mb: 1 }}>
+                  Practical how-tos on transcripts, planning a year, and keeping records
+                  for compliance.
+                </Typography>
+                <Link to="/guides">Read the guides →</Link>
+              </CardContent>
+            </Card>
+          </Grid>
+        </Grid>
+      </Container>
 
       {/* CTA Footer */}
       <Container maxWidth="md" sx={{ py: { xs: 8, md: 12 }, textAlign: "center" }}>

@@ -6,6 +6,10 @@ import Compliance from "./pages/Compliance.jsx";
 import ChildView from "./pages/ChildView.jsx";
 import Transcript from "./pages/Transcript.jsx";
 import NotFound from "./pages/NotFound.tsx";
+import HomeschoolLawsIndex from "./pages/HomeschoolLawsIndex.tsx";
+import StateGuide from "./pages/StateGuide.tsx";
+import GuidesIndex from "./pages/GuidesIndex.tsx";
+import GuidePage from "./pages/GuidePage.tsx";
 
 // Route table consumed by both the client entry and the SSG prerender pass.
 // Only "/" (Landing) is prerendered to static HTML — see ssgOptions in
@@ -17,6 +21,10 @@ export const routes: RouteRecord[] = [
     element: <App />,
     children: [
       { index: true, element: <Landing /> },
+      { path: "homeschool-laws", element: <HomeschoolLawsIndex /> },
+      { path: "homeschool-laws/:state", element: <StateGuide /> },
+      { path: "guides", element: <GuidesIndex /> },
+      { path: "guides/:slug", element: <GuidePage /> },
       { path: "dashboard", element: <Dashboard /> },
       { path: "compliance", element: <Compliance /> },
       { path: "child/:id", element: <ChildView /> },
