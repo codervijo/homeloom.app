@@ -43,7 +43,7 @@ export default function Landing() {
           <Typography variant="h2" component="h1" sx={{ fontSize: { xs: "2.25rem", md: "3.5rem" }, mb: 2 }}>
             Run your homeschool with clarity.
           </Typography>
-          <Typography variant="h6" color="text.secondary" sx={{ maxWidth: 720, mx: "auto", fontWeight: 400, mb: 4 }}>
+          <Typography variant="h6" component="p" color="text.secondary" sx={{ maxWidth: 720, mx: "auto", fontWeight: 400, mb: 4 }}>
             Compliance, daily planning, and transcripts — all in one place.
           </Typography>
           <Stack direction={{ xs: "column", sm: "row" }} spacing={2} justifyContent="center">
@@ -56,7 +56,7 @@ export default function Landing() {
       {/* Problem */}
       <Container maxWidth="lg" sx={{ py: { xs: 8, md: 12 } }}>
         <Typography variant="overline" color="primary">The problem</Typography>
-        <Typography variant="h3" sx={{ fontSize: { xs: "1.75rem", md: "2.25rem" }, mb: 5, mt: 1 }}>
+        <Typography variant="h3" component="h2" sx={{ fontSize: { xs: "1.75rem", md: "2.25rem" }, mb: 5, mt: 1 }}>
           Homeschooling shouldn't feel like running three jobs.
         </Typography>
         <Grid container spacing={3}>
@@ -64,7 +64,7 @@ export default function Landing() {
             <Grid item xs={12} md={4} key={p.title}>
               <Card sx={{ height: "100%" }}>
                 <CardContent>
-                  <Typography variant="h6" sx={{ mb: 1 }}>{p.title}</Typography>
+                  <Typography variant="h6" component="h3" sx={{ mb: 1 }}>{p.title}</Typography>
                   <Typography color="text.secondary">{p.desc}</Typography>
                 </CardContent>
               </Card>
@@ -78,7 +78,7 @@ export default function Landing() {
         <Container maxWidth="lg" sx={{ py: { xs: 8, md: 12 } }}>
           <Box sx={{ textAlign: "center", mb: 6 }}>
             <Typography variant="overline" color="primary">The solution</Typography>
-            <Typography variant="h3" sx={{ fontSize: { xs: "1.75rem", md: "2.25rem" }, mt: 1 }}>
+            <Typography variant="h3" component="h2" sx={{ fontSize: { xs: "1.75rem", md: "2.25rem" }, mt: 1 }}>
               Homeloom simplifies everything into one system.
             </Typography>
           </Box>
@@ -90,7 +90,7 @@ export default function Landing() {
                     <Box sx={{ width: 44, height: 44, borderRadius: 2, bgcolor: "primary.main", color: "#fff", display: "grid", placeItems: "center", mb: 2 }}>
                       {f.icon}
                     </Box>
-                    <Typography variant="h6" sx={{ mb: 1 }}>{f.title}</Typography>
+                    <Typography variant="h6" component="h3" sx={{ mb: 1 }}>{f.title}</Typography>
                     <Typography color="text.secondary">{f.desc}</Typography>
                   </CardContent>
                 </Card>
@@ -103,14 +103,14 @@ export default function Landing() {
       {/* Resources / internal links */}
       <Container maxWidth="lg" sx={{ py: { xs: 8, md: 12 } }}>
         <Typography variant="overline" color="primary">Free resources</Typography>
-        <Typography variant="h3" sx={{ fontSize: { xs: "1.75rem", md: "2.25rem" }, mb: 4, mt: 1 }}>
+        <Typography variant="h3" component="h2" sx={{ fontSize: { xs: "1.75rem", md: "2.25rem" }, mb: 4, mt: 1 }}>
           Know the rules. Run the year.
         </Typography>
         <Grid container spacing={3}>
           <Grid size={{ xs: 12, md: 6 }}>
             <Card sx={{ height: "100%" }}>
               <CardContent>
-                <Typography variant="h6" sx={{ mb: 1 }}>
+                <Typography variant="h6" component="h3" sx={{ mb: 1 }}>
                   <Link to="/homeschool-laws">Homeschool laws by state</Link>
                 </Typography>
                 <Typography color="text.secondary" sx={{ mb: 1 }}>
@@ -124,7 +124,7 @@ export default function Landing() {
           <Grid size={{ xs: 12, md: 6 }}>
             <Card sx={{ height: "100%" }}>
               <CardContent>
-                <Typography variant="h6" sx={{ mb: 1 }}>
+                <Typography variant="h6" component="h3" sx={{ mb: 1 }}>
                   <Link to="/guides">Homeschool guides</Link>
                 </Typography>
                 <Typography color="text.secondary" sx={{ mb: 1 }}>
@@ -140,7 +140,7 @@ export default function Landing() {
 
       {/* CTA Footer */}
       <Container maxWidth="md" sx={{ py: { xs: 8, md: 12 }, textAlign: "center" }}>
-        <Typography variant="h3" sx={{ fontSize: { xs: "1.75rem", md: "2.5rem" }, mb: 2 }}>
+        <Typography variant="h3" component="h2" sx={{ fontSize: { xs: "1.75rem", md: "2.5rem" }, mb: 2 }}>
           Ready for a calmer school year?
         </Typography>
         <Typography color="text.secondary" sx={{ mb: 4 }}>

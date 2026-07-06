@@ -75,7 +75,7 @@ export function webApplicationNode(): JsonLdNode {
     "@type": "WebApplication",
     name: SITE_NAME,
     url: `${SITE_URL}/`,
-    applicationCategory: "EducationApplication",
+    applicationCategory: "EducationalApplication",
     operatingSystem: "Web",
     description:
       "Homeloom helps homeschool families file compliance, plan daily school, and generate transcripts — all in one calm system.",

@@ -25,7 +25,7 @@ export default function Layout({ children }) {
               <Box sx={{ width: 32, height: 32, borderRadius: 2, bgcolor: "primary.main", display: "grid", placeItems: "center", color: "#fff" }}>
                 <HomeRoundedIcon fontSize="small" />
               </Box>
-              <Typography variant="h6" sx={{ fontWeight: 700 }}>Homeloom</Typography>
+              <Typography variant="h6" component="span" sx={{ fontWeight: 700 }}>Homeloom</Typography>
             </Stack>
 
             <Stack direction="row" spacing={1} sx={{ display: { xs: "none", md: "flex" } }}>
