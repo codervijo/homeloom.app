@@ -25,3 +25,20 @@
 > add genai into .gitignore and git rm it
 
 > update our own favicon and then update Prompts.md with this prompt
+
+## 2026-07-06
+> load ai_agents and docs/
+
+> READ-ONLY audit: do /homeschool-laws and the per-state pages prerender to static HTML, or are they still client-only? Report the prerender allowlist, routing model, content source, and whether real content + title/meta/canonical ship per state.
+
+> renmove docs/handoff
+
+> Replace ONLY the California [VERIFY:] placeholders with verified CA homeschool-law content (private school exemption, PSA, EC citations, filing window, subjects, records, FAQ). Do not touch any other state.
+
+> Content schema: typed per-state data files under src/data/states/<slug>.ts conforming to a shared StateGuide interface with compile-time-required fields + a lastVerified date; registry index. Take the richer content (legalFramework, pathways, filingWindow, compulsoryAge as first-class fields); withdrawal = §48222 exemption mechanism only, no steps; transcript/diploma stated as a verified fact.
+
+> to build, use docker build from ../Makefile
+
+> commit this
+
+> update prompts.md and commit it
