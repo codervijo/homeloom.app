@@ -1,0 +1,17 @@
+# Cloudflare Pages redirects.
+#
+# IMPORTANT: do NOT add a blanket `/*  /index.html  200` SPA catch-all here.
+# This site prerenders its public/SEO pages to real static HTML
+# (/, /homeschool-laws, /homeschool-laws/<state>, /guides, /guides/<slug>).
+# A blanket catch-all shadows the clean (extension-less) URLs of those files:
+# Cloudflare serves the prerendered page only at the explicit `.html` path and
+# rewrites every clean URL to the homepage shell — which is exactly the bug
+# Googlebot saw (canonical="/", no page content) even though the .html exists.
+#
+# Only the client-only, localStorage-backed app routes below have no
+# prerendered HTML and therefore need the SPA shell as a deep-link fallback.
+# Everything else is served as its prerendered static file at its clean URL.
+/dashboard    /index.html  200
+/compliance   /index.html  200
+/transcript   /index.html  200
+/child/*      /index.html  200
